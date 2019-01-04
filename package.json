@@ -1,0 +1,12 @@
+{
+  "name": "vk-alarm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "watchext": "web-ext run -f \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "watchts": "tsc app.ts --watch"
+  },
+  "author": "ishpartko",
+  "license": "ISC"
+}
