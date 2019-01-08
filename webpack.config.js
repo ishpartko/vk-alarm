@@ -3,7 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: './src/index.ts',
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [{
         test: /\.vue$/,
