@@ -4,9 +4,23 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "watchext": "web-ext run -f \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
-    "watchts": "tsc app.ts --watch"
+    "watchext": "web-ext run --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" --keep-profile-changes --firefox-profile=devProfile",
+    "watch": "webpack --watch"
   },
   "author": "ishpartko",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.21"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.2",
+    "vue-loader": "^15.5.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "vue-class-component": "^6.3.2"
+  }
 }
