@@ -7,7 +7,14 @@
     "watchext": "web-ext run --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" --keep-profile-changes --firefox-profile=devProfile",
     "watch": "webpack --watch"
   },
-  "author": "ishpartko",
+  "author": {
+    "name": "Ivan Shpartko",
+    "email": "ishpartko@gmail.com",
+    "url": "https://t.me/ishpartko"
+  },
+  "bugs": {
+    "email": "ishpartko@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "vue": "^2.5.21"

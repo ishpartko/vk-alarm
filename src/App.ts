@@ -25,7 +25,6 @@ class App {
           window.location.search.search('sel=') >= 0 && // User selected the dialog
           $usersList.length === 1 // We could see the list of users
         ) {
-          console.log('Создаю интерфейс');
           // Creating an Interface
           const $pageTabList: HTMLCollectionOf<
             HTMLUListElement

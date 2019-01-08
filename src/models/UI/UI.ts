@@ -1,33 +1,34 @@
 import User from '../User';
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.min.js';
 import UIvue from './vueUI.vue';
 
 class UI {
   private isShowing: boolean = false;
-  private vm: Vue;
+  private vm: Vue | false;
 
-  constructor($UInode: HTMLDivElement) {
-    this.vm = new Vue({
-      render: (h) => h(UIvue),
-    }).$mount($UInode);
+  constructor() {
+    const $UIdiv: HTMLDivElement = document.createElement('div');
+    $UIdiv.style.position = 'absolute';
+    const $wrapper = document.getElementById('page_wrap');
+    if ($wrapper) {
+      $wrapper.appendChild($UIdiv);
+
+      // Vue.config.productionTip = true;
+      this.vm = new Vue({
+        render: (h) => h(UIvue),
+      }).$mount($UIdiv);
+    } else {
+      this.vm = false;
+    }
   }
 
   public showUsers(users: User[]) {
-    this.vm.$children.forEach((inst) => {
-      inst.$data.users = users;
-    });
-    // if (!this.isShowing) {
-    //   let allUsers = '';
-    //   for (let i = 0; i < users.length; i++) {
-    //     allUsers += ' ' + users[i].getAlertText();
-    //   }
-    //   console.log(allUsers);
-
-    //   const $textArea: HTMLTextAreaElement = document.createElement('textarea');
-    //   $textArea.value = allUsers;
-    //   this.$UInode.appendChild($textArea);
-    //   this.isShowing = true;
-    // }
+    if (this.vm) {
+      this.vm.$children.forEach((inst) => {
+        // @ts-ignore: custom function and we cant add it in vue.d.ts
+        inst.setUsers(users);
+      });
+    }
   }
 }
 
