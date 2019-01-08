@@ -11,7 +11,6 @@ class App {
    */
 
   public builUI(): void {
-    document.body.style.border = '3px solid red';
     setInterval(() => {
       const $existingAlarmInterface = document.getElementById(
         'AlarmUserExtension'
