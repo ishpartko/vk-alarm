@@ -4,16 +4,16 @@ import UI from './UI';
 /**
  *
  * @export
- * @class ExtInterface
+ * @class VKButtonInterface
  */
-export default class ExtInterface {
+export default class VKButtonInterface {
   public $mainNode: HTMLElementTagNameMap['li'];
   public ui: UI;
 
   /**
-   *Creates an instance of ExtInterface.
+   *Creates an instance of VKButtonInterface.
    * @param {HTMLUListElement} $pageElement
-   * @memberof ExtInterface
+   * @memberof VKButtonInterface
    */
   constructor($pageElement: HTMLUListElement) {
     this.appendMainNodeToVKpage($pageElement);
@@ -34,7 +34,7 @@ export default class ExtInterface {
    * @private
    * @param {HTMLUListElement} $pageElement
    * @param {()=> void} handler
-   * @memberof ExtInterface
+   * @memberof VKButtonInterface
    */
   private appendMainNodeToVKpage($pageElement: HTMLUListElement) {
     const $icon: HTMLDivElement = document.createElement('div');

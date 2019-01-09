@@ -1,5 +1,5 @@
 import User from './models/User';
-import ExtInterface from './models/UI/ExtInterface';
+import VKButtonInterface from './models/UI/VKButtonInterface';
 
 /**
  * @class App
@@ -13,11 +13,11 @@ class App {
   public builUI(): void {
     setInterval(() => {
       const $existingAlarmInterface = document.getElementById(
-        'AlarmUserExtension'
+        'AlarmUserExtension',
       );
       if ($existingAlarmInterface === null) {
-        let $usersList: HTMLCollection = document.getElementsByClassName(
-          'ChatSettingsMembersWidget__list'
+        const $usersList: HTMLCollection = document.getElementsByClassName(
+          'ChatSettingsMembersWidget__list',
         );
         if (
           window.location.pathname === '/im' && // User on page of conversations
@@ -28,9 +28,9 @@ class App {
           const $pageTabList: HTMLCollectionOf<
             HTMLUListElement
           > = document.getElementsByClassName(
-            'ChatSettingsMenu'
+            'ChatSettingsMenu',
           ) as HTMLCollectionOf<HTMLUListElement>;
-          const inter = new ExtInterface($pageTabList[0]);
+          const inter = new VKButtonInterface($pageTabList[0]);
         }
       }
     }, 1000);
