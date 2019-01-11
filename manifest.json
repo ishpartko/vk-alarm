@@ -3,7 +3,7 @@
   "name": "VK ALARM",
   "description": "This extension helps to notify several users of VK.com from the conversation in which you are a member.",
   "author": "Ivan Shpartko",
-  
+
   "version": "1.0",
   "icons": {
     "16": "/icons/icon16x16.png",
@@ -12,7 +12,7 @@
     "128": "/icons/icon128x128.png"
   },
   "content_scripts": [{
-    "matches": ["*://vk.com/im*"],
+    "matches": ["*://vk.com/*"],
     "js": ["./dist/bundle.js"]
   }]
 }
