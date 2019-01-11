@@ -9,7 +9,7 @@
       "strict_max_version": "*"
     }
   },
-  "version": "1.1",
+  "version": "1.11",
   "icons": {
     "16": "/icons/icon16x16.png",
     "48": "/icons/icon48x48.png",
