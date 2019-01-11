@@ -3,7 +3,12 @@
   "name": "VK ALARM",
   "description": "This extension helps to notify several users of VK.com from the conversation in which you are a member.",
   "author": "Ivan Shpartko",
-
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "42.0",
+      "strict_max_version": "*"
+    }
+  },
   "version": "1.1",
   "icons": {
     "16": "/icons/icon16x16.png",
@@ -11,10 +16,8 @@
     "60": "/icons/icon60x60.png",
     "128": "/icons/icon128x128.png"
   },
-  "content_scripts": [
-    {
-      "matches": ["*://vk.com/*"],
-      "js": ["./dist/bundle.js"]
-    }
-  ]
+  "content_scripts": [{
+    "matches": ["*://vk.com/*"],
+    "js": ["./dist/bundle.js"]
+  }]
 }
