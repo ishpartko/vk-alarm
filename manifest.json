@@ -4,15 +4,17 @@
   "description": "This extension helps to notify several users of VK.com from the conversation in which you are a member.",
   "author": "Ivan Shpartko",
 
-  "version": "1.0",
+  "version": "1.1",
   "icons": {
     "16": "/icons/icon16x16.png",
     "48": "/icons/icon48x48.png",
     "60": "/icons/icon60x60.png",
     "128": "/icons/icon128x128.png"
   },
-  "content_scripts": [{
-    "matches": ["*://vk.com/*"],
-    "js": ["./dist/bundle.js"]
-  }]
+  "content_scripts": [
+    {
+      "matches": ["*://vk.com/*"],
+      "js": ["./dist/bundle.js"]
+    }
+  ]
 }
