@@ -2,10 +2,15 @@
 
 ## For all
 
-  if you are using __npm__:<br>
+1. if you are using **npm**:<br>
+
    <code>(PS)>npm install</code><br>
    if **yarn**:<br>
+
    <code>(PS)>yarn install</code>
+
+2. to develop ext for FF rename **"manifestFox.json"** just to **"manifest.json"**
+   or to develop ext for Chrome rename **"manifestChrome.json"** just to **"manifest.json"**
 
 ## For development
 
