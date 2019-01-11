@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "repository": {
+    "url": "https://github.com/ishpartko/vk-alarm"
+  },
   "scripts": {
     "watchext": "web-ext run --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" --keep-profile-changes --firefox-profile=devProfile",
     "watch": "webpack --watch",
